@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Laser Technologies</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Correct Font Awesome link -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-
     <link rel="stylesheet" href="styles.css">
     <style>
         /* Custom CSS for full-width image */
@@ -111,26 +111,38 @@
             display: flex;
             justify-content: center;
             margin-bottom: 20px;
+            margin-top: 4rem;
         }
 
         .option {
-            margin: 10px;
-            padding: 20px;
+            margin: 15px;
+            padding: 50px 20px; /* Increased padding for bigger boxes */
             border: 1px solid #ddd;
             border-radius: 10px;
             cursor: pointer;
             text-align: center;
             transition: background-color 0.3s ease;
+            width: 200px; /* Ensure consistent width */
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); /* Grey shadow with opacity */
+            
+
         }
 
         .option:hover {
             background-color: #f8f8f8;
+            transform: scale(1.1); /* Increase size by 10% on hover */
+            transition: transform 0.2s ease-in-out;
         }
 
         .option i {
             font-size: 30px;
             margin-bottom: 10px;
             display: block;
+        }
+
+        .option span {
+            display: block;
+            color: #4A4A4A
         }
 
         .newsletter {
@@ -160,14 +172,94 @@
             margin-left: 10px;
             font-weight: bold;
         }
+
+        .subscription-box {
+            background-color: #F31524;
+            ;
+            padding: 20px;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px 0;
+            border-radius: 50px 0 50px ; /*  border radius for that shape  */
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); /* Grey shadow with opacity */
+            position: relative;
+            top: 4rem;
+            z-index: 2;
+
+
+        }
+
+        .subscription-box input[type="email"] {
+            padding: 15px;
+            border: none;
+            border-radius: 20px;
+            margin-right: 10px;
+            flex: 1;
+        }
+
+        .subscription-box button {
+            padding: 15px 25px;
+            position: relative;
+            left: -50px;
+            
+            background-color: #000;
+            color: #fff;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            flex: 0;
+            
+            
+        }
+
+        .subscription-box span {
+            color: #fff;
+            font-weight: bold;
+            margin-right: 20px;
+        }
+
+        @media (max-width: 576px) {
+            .subscription-box {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .subscription-box input[type="email"],
+            .subscription-box button {
+                margin-bottom: 10px;
+                width: 100%;
+                border-radius: 10px;
+            }
+
+            .subscription-box span {
+                margin-bottom: 10px;
+            }
+        }
+        .black-box {
+    background-color: black;
+    padding: 30px 0;
+    width: 100%;
+    position: relative;
+    height: 150px; /* Adjust the height as needed */
+}
+
+.black-box img {
+    width: 200px; 
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
     </style>
+    
 </head>
 
 <body>
     <header class="container-fluid p-3">
         <div class="row">
             <div class="col-12">
-                <img src="logo.jpg" alt="Laser Technologies" class="img-fluid logo">
+                <img src="logoblack.png" alt="Laser Technologies" class="img-fluid logo">
             </div>
         </div>
     </header>
@@ -180,35 +272,48 @@
             <div class="options">
               <div class="option">
                 <i class="fas fa-calendar"></i>
-                <span>Schedule a Demo</span>
+                <span>Schedule a  <br> <span style="color: #F31524;"> Demo </span></span>
               </div>
               <div class="option">
                 <i class="fas fa-file-alt"></i>
-                <span>Request a Quote</span>
+                <span>Request a <br> <span style="color: #F31524;"> Quote </span></span>
               </div>
               <div class="option">
                 <i class="fas fa-file-upload"></i>
-                <span>Send us a Sample</span>
+                <span>Send us a <br> <span style="color: #F31524;"> Sample </span></span>
               </div>
               <div class="option">
                 <i class="fas fa-headset"></i>
-                <span>Raise your Query</span>
-                <span class="contact-person">Taiha Sheikh</span>
+                <span>Raise your <br> <span style="color: #F31524;"> Query </span></span>
               </div>
             </div>
             <div class="newsletter">
-              <input type="email" placeholder="Enter your email" />
-              <button class="subscribe-btn">SUBSCRIBE</button>
-              <span>Subscribe To Our Newsletter & Stay Updated</span>
             </div>
-          </div>
+
+
+                <!-- New subscription box -->
+                <div class="subscription-box">
+                    <span>Subscribe To Our Newsletter & Stay Updated</span>
+                    <input type="email" placeholder="Your Email" />
+                    <button>SUBSCRIBE</button>
+                </div>
+                
+                
+        
+          
     </main>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13RqTJPwps/Ncrt2JcwEJUpfA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</div>
+         
+<div class="black-box">
+  <img src="logowhite.png" alt="Laser Technologies" class="img-fluid logo">
+
+</div>
+
 
 </body>
 
