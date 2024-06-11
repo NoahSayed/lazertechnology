@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laser Technologies</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Custom CSS for full-width image */
+        .full-width-image {
+            width: 140%;
+            height: auto;
+            display: block;
+            position: relative;
+            left: -15rem;
+        }
+
+        /* Ensure the container doesn't add unwanted padding or margins */
+        .image-container {
+            padding: 0;
+            margin: 0;
+        }
+
+        /* Custom CSS for office locations */
+        .office-locations {
+            text-align: center;
+            margin: 50px 0;
+        }
+
+        .office-locations .location {
+            padding: 20px;
+            position: relative;
+            transition: border 0.3s ease;
+            margin-bottom: 30px;
+        }
+
+        .office-locations .location h4 {
+            font-size: 1.75rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .office-locations .location p {
+            font-size: 1rem;
+            margin: 5px 0;
+            color: #555;
+        }
+
+        /* Large letters behind the text */
+        .location::before {
+            content: attr(data-letter);
+            position: absolute;
+            font-size: 10rem;
+            color: rgba(0, 0, 0, 0.05);
+            top: 50%;
+            left: 10%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        /* Blue border on hover */
+        .location:hover {
+            border: 2px solid blue;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .office-locations .location::before {
+                font-size: 5rem;
+            }
+
+            .office-locations .location h4 {
+                font-size: 1.5rem;
+            }
+
+            .office-locations .location p {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .office-locations .location {
+                padding: 10px;
+            }
+
+            .office-locations .location::before {
+                font-size: 3rem;
+            }
+
+            .office-locations .location h4 {
+                font-size: 1.25rem;
+            }
+
+            .office-locations .location p {
+                font-size: 0.8rem;
+            }
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .options {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .option {
+            margin: 10px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            cursor: pointer;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .option:hover {
+            background-color: #f8f8f8;
+        }
+
+        .option i {
+            font-size: 30px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .newsletter {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .newsletter input {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        .newsletter button {
+            padding: 10px 20px;
+            background-color: #d32f2f;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .newsletter span {
+            margin-left: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="container-fluid p-3">
+        <div class="row">
+            <div class="col-12">
+                <img src="logo.jpg" alt="Laser Technologies" class="img-fluid logo">
+            </div>
+        </div>
+    </header>
+    <main class="container">
+        
+
+        <!-- How can we help section -->
+        <div>
+            <h2>How can we help?</h2>
+            <div class="options">
+              <div class="option">
+                <i class="fas fa-calendar"></i>
+                <span>Schedule a Demo</span>
+              </div>
+              <div class="option">
+                <i class="fas fa-file-alt"></i>
+                <span>Request a Quote</span>
+              </div>
+              <div class="option">
+                <i class="fas fa-file-upload"></i>
+                <span>Send us a Sample</span>
+              </div>
+              <div class="option">
+                <i class="fas fa-headset"></i>
+                <span>Raise your Query</span>
+                <span class="contact-person">Taiha Sheikh</span>
+              </div>
+            </div>
+            <div class="newsletter">
+              <input type="email" placeholder="Enter your email" />
+              <button class="subscribe-btn">SUBSCRIBE</button>
+              <span>Subscribe To Our Newsletter & Stay Updated</span>
+            </div>
+          </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13RqTJPwps/Ncrt2JcwEJUpfA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</body>
+
+</html>

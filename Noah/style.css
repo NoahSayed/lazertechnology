@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+header .logo {
+    max-width: 200px; /* Adjust the logo size if necessary */
+}
+
+.container {
+ margin-top: 50px;
+    
+}
+
+.black-box {
+    background-color: #000000;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.black-box h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.black-box p {
+    font-size: 16px;
+}
+
+.bg-light {
+    background-color: #f8f9fa !important;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+button {
+    background-color: #000000;
+    color: #ffffff;
+}
