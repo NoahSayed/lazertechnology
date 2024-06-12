@@ -1,12 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Laser Technologies</title>
-    <!-- Correct Font Awesome link -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <style>
@@ -101,20 +98,19 @@
                 font-size: 0.8rem;
             }
         }
-
         h2 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
+  text-align: center;
+  margin-bottom: 20px;
+}
 
-        .options {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 20px;
-            margin-top: 4rem;
-        }
+.options {
+  display: flex;
+  justify-content: center;
+}
 
-        .option {
+.option {
+            margin: 10px;
+            padding: 20px;
             margin: 15px;
             padding: 50px 20px; /* Increased padding for bigger boxes */
             border: 1px solid #ddd;
@@ -124,7 +120,7 @@
             transition: background-color 0.3s ease;
             width: 200px; /* Ensure consistent width */
             box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); /* Grey shadow with opacity */
-            
+
 
         }
 
@@ -135,8 +131,6 @@
         }
 
         .option i {
-            font-size: 30px;
-            margin-bottom: 10px;
             display: block;
         }
 
@@ -148,27 +142,6 @@
         .newsletter {
             display: flex;
             align-items: center;
-            justify-content: center;
-            margin-top: 20px;
-        }
-
-        .newsletter input {
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            margin-right: 10px;
-        }
-
-        .newsletter button {
-            padding: 10px 20px;
-            background-color: #d32f2f;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .newsletter span {
             margin-left: 10px;
             font-weight: bold;
         }
@@ -203,15 +176,15 @@
             padding: 15px 25px;
             position: relative;
             left: -50px;
-            
+
             background-color: #000;
             color: #fff;
             border: none;
             border-radius: 20px;
             cursor: pointer;
             flex: 0;
-            
-            
+
+
         }
 
         .subscription-box span {
@@ -252,7 +225,7 @@
     right: 10px;
 }
     </style>
-    
+
 </head>
 
 <body>
@@ -264,57 +237,132 @@
         </div>
     </header>
     <main class="container">
-        
-
-        <!-- How can we help section -->
-        <div>
-            <h2>How can we help?</h2>
-            <div class="options">
-              <div class="option">
-                <i class="fas fa-calendar"></i>
-                <span>Schedule a  <br> <span style="color: #F31524;"> Demo </span></span>
-              </div>
-              <div class="option">
-                <i class="fas fa-file-alt"></i>
-                <span>Request a <br> <span style="color: #F31524;"> Quote </span></span>
-              </div>
-              <div class="option">
-                <i class="fas fa-file-upload"></i>
-                <span>Send us a <br> <span style="color: #F31524;"> Sample </span></span>
-              </div>
-              <div class="option">
-                <i class="fas fa-headset"></i>
-                <span>Raise your <br> <span style="color: #F31524;"> Query </span></span>
-              </div>
+        <div class="row justify-content-center mt-4">
+            <div class="col-md-6 text-white  p-5" style= "
+            background: #000000;
+            margin-top: 100px;
+            height: 196px;
+            border-top-left-radius: 50px;
+            border-bottom-right-radius: 50px;">
+                <h2>Get in touch</h2>
+                <p>Need our expertise for choosing your next laser machine?</p>
             </div>
-            <div class="newsletter">
-            </div>
+            <div class="col-md-6">
+                <form action="index.php" method="post" class="bg-light p-5 rounded-right">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="organization" placeholder="Organisation Name"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="contact" placeholder="Contact Number" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" name="email" placeholder="Email ID" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" name="remark" rows="3" placeholder="Remark"></textarea>
+                    </div>
+                    <label for="captcha">Captcha:</label>
+                    <input type="text" id="captcha" name="captcha" required>
+                    <img src="captcha.php" alt="CAPTCHA Image">
+                    <button type="submit" class="btn btn-dark btn-block">Submit</button>
+                </form>
+            </div>
+        </div>
 
+        <!-- Add the full-width image below the form -->
+        <div class="container-fluid image-container mt-4">
+            <img src="map.png" alt="Office Location Map" class="full-width-image">
+        </div>
 
-                <!-- New subscription box -->
-                <div class="subscription-box">
-                    <span>Subscribe To Our Newsletter & Stay Updated</span>
-                    <input type="email" placeholder="Your Email" />
-                    <button>SUBSCRIBE</button>
+        <!-- Add office locations section with margin-top for separation -->
+        <section class="container office-locations">
+            <div class="row">
+                <div class="col-md-4 location" data-letter="M">
+                    <h4>Mumbai</h4>
+                    <p>PAP/R/406 Rabale MIDC</p>
+                    <p>Near Dol Electric Company</p>
+                    <p>Rable MIDC, Navi Mumbai - 400701.</p>
                 </div>
-                
-                
-        
-          
-    </main>
+                <div class="col-md-4 location" data-letter="P">
+                    <h4>Pune</h4>
+                    <p>"S" Block, Plot No.186, MIDC, Bhosari</p>
+                    <p>Pune - 411026</p>
+                </div>
+                <div class="col-md-4 location" data-letter="G">
+                    <h4>Gujarat</h4>
+                    <p>A-5, GF, Barcelona Multiple Business Campus</p>
+                    <p>Odhav Ring Road Circle, Ahmedabad</p>
+                    <p>Gujarat - 382430</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 location" data-letter="D">
+                    <h4>Delhi</h4>
+                    <p>S-98 Second Floor Phase-2</p>
+                    <p>Okhla Industrial Area, New Delhi - 110020</p>
+                </div>
+                <div class="col-md-6 location" data-letter="K">
+                    <h4>Karnataka</h4>
+                    <p>77/78/B, Janapriya Commercial Complex</p>
+                    <p>Magadi Main Rd, Sunkadakatte, Bengaluru</p>
+                    <p>Karnataka - 560091</p>
+                </div>
+            </div>
+        </section>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <!-- Add the image from the provided screenshot -->
+        <h2>How can we help?</h2>
+        <div class="options">
+            <div class="option">
+              <i class="fas fa-calendar fa-2x"></i>
+              <span>Schedule a  <br> <span style="color: #F31524;"> Demo </span></span>
+            </div>
+            <div class="option">
+              <i class="fas fa-file-alt fa-2x"></i>
+              <span>Request a <br> <span style="color: #F31524;"> Quote </span></span>
+            </div>
+            <div class="option">
+              <i class="fas fa-file-upload fa-2x"></i>
+              <span>Send us a <br> <span style="color: #F31524;"> Sample </span></span>
+            </div>
+            <div class="option">
+              <i class="fas fa-headset fa-2x"></i>
+              <span>Raise your <br> <span style="color: #F31524;"> Query </span></span>
+            </div>
+          </div>
+          <div class="newsletter">
+           
+        </div>
+
+
+              <!-- New subscription box -->
+              <div class="subscription-box">
+                  <span>Subscribe To Our Newsletter & Stay Updated</span>
+                  <input type="email" placeholder="Your Email" />
+                  <button>SUBSCRIBE</button>
+              </div>
+
+
+
+
+  </main>
 
 </div>
-         
+
 <div class="black-box">
   <img src="logowhite.png" alt="Laser Technologies" class="img-fluid logo">
 
 </div>
 
 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </body>
 
 </html>
