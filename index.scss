@@ -1,0 +1,599 @@
+@media(max-width: 576px) {
+    body {
+        width: 708px;
+    }
+}
+
+.full-width-image {
+    width: 140%;
+    height: auto;
+    display: block;
+    position: relative;
+    left: -15rem;
+}
+
+/* Ensure the container doesn't add unwanted padding or margins */
+.image-container {
+    padding: 0;
+    margin: 0;
+}
+
+/* Custom CSS for office locations */
+.office-locations {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.office-locations .location {
+    padding: 20px;
+    position: relative;
+    transition: border 0.3s ease;
+    margin-bottom: 30px;
+}
+
+.office-locations .location h4 {
+    font-size: 1.75rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.office-locations .location p {
+    font-size: 1rem;
+    margin: 5px 0;
+    color: #555;
+}
+
+/* Large letters behind the text */
+.location::before {
+    content: attr(data-letter);
+    position: absolute;
+    font-size: 10rem;
+    color: rgba(0, 0, 0, 0.05);
+    top: 50%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Blue border on hover */
+.location:hover {
+    border: 2px solid blue;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .office-locations .location::before {
+        font-size: 5rem;
+    }
+
+    .office-locations .location h4 {
+        font-size: 1.5rem;
+    }
+
+    .office-locations .location p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+.office-locations .location {
+padding: 10px; /* Adjust padding as needed */
+display: flex;
+flex-direction: row; /* Align items in a row */
+align-items: center; /* Center items vertically */
+margin-bottom: 30px; /* Ensure space between sections */
+}
+
+.office-locations .location::before {
+content: attr(data-letter);
+font-size: 3rem;
+color: rgba(0, 0, 0, 0.05);
+text-transform: uppercase;
+font-weight: bold;
+margin-right: 10px; /* Add space to the right of the letter */
+position: static; /* Remove absolute positioning */
+transform: none; /* Remove transformation */
+align-self: flex-start; /* Align the letter to the start */
+}
+
+.office-locations .location h4 {
+font-size: 1.25rem;
+margin-bottom: 5px; /* Add space below the city name */
+}
+
+.office-locations .location p {
+font-size: 0.8rem;
+margin: 0;
+}
+}
+
+h2 {
+    text-align: center;
+    font-size: 38px;
+    color: #FFFFFF;
+}
+
+h2.how {
+    color: #000;
+}
+
+.options {
+    display: flex;
+    justify-content: center;
+}
+
+.option {
+    margin: 10px;
+    padding: 50px 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    width: 200px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.option:hover {
+    background-color: #f8f8f8;
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.option i {
+    display: block;
+}
+
+.option span {
+    display: block;
+    color: #4A4A4A
+}
+
+.newsletter {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.subscription-box {
+    background-color: #F31524;
+    padding: 20px;
+    border-radius: 50px 0 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+    top: 4rem;
+    z-index: 2;
+}
+
+.subscription-box input[type="email"] {
+    padding: 15px;
+    border: none;
+    border-radius: 20px;
+    margin-right: 10px;
+    flex: 1;
+}
+
+.subscription-box button {
+    padding: 15px 25px;
+    position: relative;
+    left: -50px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    flex: 0;
+}
+.subscription-box span {
+color: white;
+font-weight: bold;}
+
+@media(max-width: 576px) {
+    .subscription-box button {
+        position: relative;
+        right: -2em;
+    }
+
+    .subscription-box {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .subscription-box input[type="email"],
+    .subscription-box button {
+        margin-bottom: 10px;
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .subscription-box span {
+        margin-bottom: 10px;
+    }
+    @media(max-width: 576px) {
+.subscription-box {
+flex-direction: column;
+align-items: stretch;
+padding: 10px;
+border-top-left-radius: 50px;
+border-bottom-right-radius: 50px;       
+ background-color: #F31524;
+display: flex;
+align-items: center;
+justify-content: center;
+margin: 20px 0;
+box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+position: relative;
+}
+
+.subscription-box span {
+color: white;
+font-weight: bold;
+margin-bottom: 10px;
+text-align: center;
+}
+
+.subscription-box input[type="email"] {
+padding: 10px;
+border: none;
+border-radius: 20px;
+margin-bottom: 10px;
+width: 80%;
+}
+
+.subscription-box button {
+padding: 10px 20px;
+background-color: #000;
+color: #fff;
+border: none;
+border-radius: 20px;
+cursor: pointer;
+width:100%;
+margin-left: 6rem;
+}
+}
+
+}
+
+.black-box {
+    background-color: black;
+    padding: 30px 0;
+    width: 100%;
+    position: relative;
+    height: 150px;
+}
+
+.black-box img {
+    width: 200px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+form {
+    width: 600px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.form-group {
+    width: 48%;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: #f2f2f2;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #aaa;
+}
+
+.form-group-full {
+    width: 100%;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #000;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #333;
+}
+
+.g-recaptcha {
+    margin-top: 10px;
+}
+
+.t1 {
+    padding-right: 70px;
+    padding-left: 40px;
+}
+
+.t2 {
+    margin-left: 20px;
+}
+
+.headquarters {
+    width: 30%;
+    position: absolute;
+    top: 120%;
+    left: 10%;
+    z-index: 999;
+}
+
+
+
+@media (max-width: 470px) {
+    .headquarters {
+        width: 100%;
+        position: absolute;
+        left: 10%;
+        z-index: 999;
+    }
+}
+
+
+
+@media (max-width: 767px) {
+    .options {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        padding: 0 20px;
+    }
+
+    .option {
+        padding: 20px 10px;
+        font-size: 14px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        text-align: center;
+    }
+
+    .option i {
+        font-size: 24px;
+        margin-bottom: 8px;
+    }
+
+    .option span {
+        display: block;
+        margin-top:8px;
+color: #333; /* Change text color */
+}
+
+.option span span {
+color: #F31524; /* Keep the inner text red */
+}
+}
+
+
+@media (max-width: 768px) {
+.office-locations .location::before {
+font-size: 5rem;
+}
+
+.office-locations .location h4 {
+font-size: 1.5rem;
+}
+
+.office-locations .location p {
+font-size: 0.9rem;
+}
+}
+
+
+
+@media (max-width: 576px) {
+.office-locations .location {
+padding: 10px;
+display: flex;
+flex-direction: column; /* Stack items vertically */
+align-items: flex-start; /* Align items to the start of the container */
+}
+
+.office-locations .location::before {
+content: attr(data-letter);
+font-size: 3rem;
+color: rgba(0, 0, 0, 0.05);
+text-transform: uppercase;
+font-weight: bold;
+margin-bottom: 5px; /* Add some space below the letter */
+position: static; /* Remove absolute positioning */
+transform: none; /* Remove transformation */
+align-self: flex-start; /* Align the letter to the start */
+}
+
+.office-locations .location h4 {
+font-size: 1.25rem;
+margin-bottom: 5px; /* Add some space below the city name */
+}
+
+.office-locations .location p {
+font-size: 0.8rem;
+margin: 0;
+}
+}
+
+.map2{
+height: 100%;
+
+}
+@media (max-width :330px){
+
+.black-box{
+width: 960px;
+}
+}
+@media (max-width: 576px) {
+.office-locations .location {
+padding: 10px; /* Adjust padding as needed */
+display: flex;
+align-items: center; /* Center align items */
+margin-bottom: 30px; /* Ensure space between sections */
+}
+
+.office-locations .location::before {
+content: attr(data-letter);
+font-size: 3rem;
+color: rgba(0, 0, 0, 0.05);
+text-transform: uppercase;
+font-weight: bold;
+margin-right: 10px; /* Add space to the right of the letter */
+position: static; /* Remove absolute positioning */
+transform: none; /* Remove transformation */
+margin-left: 100px;
+position: relative;
+
+}
+
+.office-locations .location h4 {
+font-size: 1.25rem;
+margin-bottom: 5px; /* Add space below the city name */
+}
+
+.office-locations .location p {
+font-size: 0.8rem;
+margin: 0;
+}
+}
+@media (max-width: 376px) {
+    .headquarters {
+        width: 50%;
+        position: absolute;
+        top: 50%; /* Adjust the top position to place it correctly on the map */
+left: 50%; /* Center horizontally, adjust as necessary */
+transform: translate(-50%, -50%);
+
+        
+    }}
+
+@media (max-width: 576px) {
+.t1 {
+padding: 0 20px; /* Adjust padding to match the screenshot */
+}
+.t2{
+margin: 0;
+}
+form {
+width: 100%;
+padding: 20px;
+background-color: white;
+box-shadow: none;
+border-radius: 0;
+}
+
+h2 {
+font-size: 24px;
+color: #000;
+text-align: left;
+}
+h2.get{
+color: #fff;
+}
+h2.how {
+margin-left: 220px;
+}
+.form-row {
+flex-direction: column;
+margin-bottom: 0;
+}
+
+.form-group {
+width: 100%;
+margin-bottom: 10px;
+}
+.form-group .organization-name {
+margin: 0; /* Adjust margin to align with other elements */
+}
+
+input,
+textarea {
+width: 100%;
+padding: 10px;
+border: 1px solid #ddd;
+border-radius: 4px;
+font-size: 14px;
+background-color: #f2f2f2;
+}
+
+input:focus,
+textarea:focus {
+border-color: #aaa;
+}
+
+.g-recaptcha {
+margin-top: 10px;
+}
+
+button {
+width: 100%;
+padding: 10px;
+background-color: #000;
+color: white;
+border: none;
+border-radius: 4px;
+font-size: 16px;
+cursor: pointer;
+}
+
+button:hover {
+background-color: #333;
+}
+
+.headquarters {
+width: 100%; /* Adjust the width to match the design */
+position: absolute;
+top: 50%; /* Center vertically */
+left: 50%; /* Center horizontally */
+transform: translate(-50%, -50%); /* Center the element */
+z-index: 999;
+background-color: #000; /* Background color if needed */
+padding: 10px; /* Padding if needed */
+border-radius: 10px; /* Border radius for rounded corners */
+top: 1300px;
+left: 200px;
+}
+
+.headquarters h2 {
+font-size: 1.25rem; /* Adjust font size */
+color: white; /* Text color */
+text-align: center; /* Center the text */
+margin-bottom: 10px; /* Margin below the heading */
+}
+
+.headquarters p {
+font-size: 0.9rem; /* Adjust font size */
+color: white; /* Text color */
+margin: 0; /* Remove default margins */
+text-align: center; /* Center the text */
+}
+
+}
