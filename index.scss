@@ -12,13 +12,11 @@
     left: -15rem;
 }
 
-/* Ensure the container doesn't add unwanted padding or margins */
 .image-container {
     padding: 0;
     margin: 0;
 }
 
-/* Custom CSS for office locations */
 .office-locations {
     text-align: center;
     margin: 50px 0;
@@ -57,12 +55,10 @@
     font-weight: bold;
 }
 
-/* Blue border on hover */
 .location:hover {
     border: 2px solid blue;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
     .office-locations .location::before {
         font-size: 5rem;
@@ -79,11 +75,11 @@
 
 @media (max-width: 576px) {
 .office-locations .location {
-padding: 10px; /* Adjust padding as needed */
+padding: 10px; 
 display: flex;
-flex-direction: row; /* Align items in a row */
-align-items: center; /* Center items vertically */
-margin-bottom: 30px; /* Ensure space between sections */
+flex-direction: row; 
+align-items: center; 
+margin-bottom: 30px; 
 }
 
 .office-locations .location::before {
@@ -92,10 +88,10 @@ font-size: 3rem;
 color: rgba(0, 0, 0, 0.05);
 text-transform: uppercase;
 font-weight: bold;
-margin-right: 10px; /* Add space to the right of the letter */
-position: static; /* Remove absolute positioning */
-transform: none; /* Remove transformation */
-align-self: flex-start; /* Align the letter to the start */
+margin-right: 10px;
+position: static; 
+transform: none; 
+align-self: flex-start; 
 }
 
 .office-locations .location h4 {
